@@ -68,7 +68,6 @@ if (sum === 15) {
     console.log("😱 Task B has some issues, but you can fix it 👍");
 }
 
-
 /* -----------------------------------------------------------------------------
     Task: C
     You are given a list (Array) named "andreTall."
@@ -80,6 +79,13 @@ console.log("Task: C");
 
 const andreTall = [6, 7, 8, 9]
 
+let differanse = andreTall[0];
+
+for (let i = 1; i < andreTall.length; i++) {
+    differanse -= andreTall[i];
+}
+
+console.log(differanse);
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -90,9 +96,12 @@ const andreTall = [6, 7, 8, 9]
 console.log("");
 console.log("Task: D");
 
-function differansier(liste) {
-
-    /* What should go here?? */
+let counter = andreTall[0]
+function differansier(list) {
+  for (let  i = 1; i < list.length; i++) {
+    counter -= list[i]
+  }
+  return counter
 }
 
 const diff = differansier(andreTall);
@@ -109,3 +118,6 @@ if (diff === -18) {
     Create a function named "multipliser." This function should take (as a parameter) a list of numbers.
     The function should return the product of the numbers (i.e., tal1 * tal2 * tal3 * ... and so on).
 */
+
+console.log("");
+console.log("Task: E");
