@@ -4,7 +4,7 @@
     You do this by writing your answer after a task is given (see the example).
 
     In this problem set, we focus specifically on lists, loops (for), and functions.
-    I.e. use litst and loops, dont use "fancy" alternatives.
+    I.e. use lists and loops, don't use "fancy" alternatives.
 
     DO NOT change the code provided unless the task specifically says you should.
 */
@@ -24,12 +24,22 @@ for (let index = 0; index < people.length; index++) {
 
 /* -----------------------------------------------------------------------------
     Task: A
-    You are given a list (Array) named "tall."
+    You are given a list (Array) named "tall".
     Write the code that will ensure the variable "sum" contains the sum of all the numbers in the list (i.e., tal1 + tal2 + tal3 + tal4 + ... and so on).
 */
-console.log("Task: A");
+
+console.log("");
+console.log("Task A");
 
 const tall = [1, 2, 3, 4, 5];
+
+let total = 0;
+
+for (let  i = 0; i < tall.length; i++) {
+   total += tall[i];
+};
+
+console.log(total);
 
 
 /* -----------------------------------------------------------------------------
@@ -37,12 +47,17 @@ const tall = [1, 2, 3, 4, 5];
     Below is a function "summer," which is incomplete; it should return the sum of the numbers it receives in a list.
     Your task is to complete the function so that it does that.
 */
+
+console.log("");
 console.log("Task: B");
 
-function summer(liste) {
 
-    /* What should go here?? */
-
+let count = 0;
+function summer(list) {
+    for (let  i = 0; i < list.length; i++) {
+        count += list[i];
+     }
+  return count
 }
 
 const sum = summer(tall);
@@ -57,8 +72,10 @@ if (sum === 15) {
 /* -----------------------------------------------------------------------------
     Task: C
     You are given a list (Array) named "andreTall."
-    Write the code that will ensure the variable "differans" contains the difference of all the numbers in the list (i.e., tal1 - tal2 - tal3 - tal4 - ... and so on).
+    Write the code that will ensure the variable "differanse" contains the difference of all the numbers in the list (i.e., tal1 - tal2 - tal3 - tal4 - ... and so on).
 */
+
+console.log("");
 console.log("Task: C");
 
 const andreTall = [6, 7, 8, 9]
@@ -69,6 +86,8 @@ const andreTall = [6, 7, 8, 9]
     Below is a function "differansier," which is incomplete; it should return the difference of the numbers it receives in a list.
     Your task is to complete the function so that it does that.
 */
+
+console.log("");
 console.log("Task: D");
 
 function differansier(liste) {
