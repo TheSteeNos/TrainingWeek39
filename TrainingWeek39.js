@@ -1,26 +1,8 @@
 /*
-    Hi.
-    The purpose is to practice a few things at a time.
-    You do this by writing your answer after a task is given (see the example).
-
-    In this problem set, we focus specifically on lists, loops (for), and functions.
-    I.e. use lists and loops, don't use "fancy" alternatives.
-
-    DO NOT change the code provided unless the task specifically says you should.
+NOTE FOR TEACHER!!!
+I changed some variable names based on them being mentioned further down in the code as a const.
+Therefore, it was for instance impossible to assign the variable "sum" in Task A, as it was a const in Task B.
 */
-
-/* -----------------------------------------------------------------------------
-    Task: Example
-    Write the code to print out all the names in the list, one name per line.
-*/
-console.log("Task: Example");
-const people = ["Tony", "Christian", "Håkon"]
-
-for (let index = 0; index < people.length; index++) {
-    let person = people[index];
-    console.log(person);
-}
-
 
 /* -----------------------------------------------------------------------------
     Task: A
@@ -31,15 +13,15 @@ for (let index = 0; index < people.length; index++) {
 console.log("");
 console.log("Task A");
 
-const tall = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
-let total = 0;
+let sum = 0;
 
-for (let  i = 0; i < tall.length; i++) {
-   total += tall[i];
+for (let  i = 0; i < numbers.length; i++) {
+   sum += numbers[i];
 };
 
-console.log(total);
+console.log(sum);
 
 
 /* -----------------------------------------------------------------------------
@@ -52,17 +34,17 @@ console.log("");
 console.log("Task: B");
 
 
-let count = 0;
+let sum2 = 0;
 function summer(list) {
     for (let  i = 0; i < list.length; i++) {
-        count += list[i];
+        sum2 += list[i];
      }
-  return count
+  return sum2;
 }
 
-const sum = summer(tall);
+const taskBAnswer = summer(numbers);
 
-if (sum === 15) {
+if (taskBAnswer === 15) {
     console.log("🎉 Task B is most likely correct");
 } else {
     console.log("😱 Task B has some issues, but you can fix it 👍");
@@ -71,42 +53,43 @@ if (sum === 15) {
 /* -----------------------------------------------------------------------------
     Task: C
     You are given a list (Array) named "andreTall."
-    Write the code that will ensure the variable "differanse" contains the difference of all the numbers in the list (i.e., tal1 - tal2 - tal3 - tal4 - ... and so on).
+    Write the code that will ensure the variable "difference" contains the difference of all the numbers in the list (i.e., tal1 - tal2 - tal3 - tal4 - ... and so on).
 */
 
 console.log("");
 console.log("Task: C");
 
-const andreTall = [6, 7, 8, 9]
+const otherNumbers = [6, 7, 8, 9];
 
-let differanse = andreTall[0];
+let difference = otherNumbers[0];
 
-for (let i = 1; i < andreTall.length; i++) {
-    differanse -= andreTall[i];
+for (let i = 1; i < otherNumbers.length; i++) {
+    difference -= otherNumbers[i];
 }
 
-console.log(differanse);
+console.log(difference);
 
 /* -----------------------------------------------------------------------------
     Task: D
-    Below is a function "differansier," which is incomplete; it should return the difference of the numbers it receives in a list.
+    Below is a function "differentiate," which is incomplete; it should return the difference of the numbers it receives in a list.
     Your task is to complete the function so that it does that.
 */
 
 console.log("");
 console.log("Task: D");
 
-let counter = andreTall[0]
-function differansier(list) {
+let differenceTwo = otherNumbers[0];
+
+function differentiate(list) {
   for (let  i = 1; i < list.length; i++) {
-    counter -= list[i]
+    differenceTwo -= list[i];
   }
-  return counter
+  return differenceTwo;
 }
 
-const diff = differansier(andreTall);
+const taskDAnswer = differentiate(otherNumbers);
 
-if (diff === -18) {
+if (taskDAnswer === -18) {
     console.log("🎉 Task D is most likely correct");
 } else {
     console.log("😱 Task D has some issues, but you can fix it 👍");
@@ -115,9 +98,30 @@ if (diff === -18) {
 
 /* -----------------------------------------------------------------------------
     Task: E
-    Create a function named "multipliser." This function should take (as a parameter) a list of numbers.
+    Create a function named "multiply." This function should take (as a parameter) a list of numbers.
     The function should return the product of the numbers (i.e., tal1 * tal2 * tal3 * ... and so on).
 */
 
 console.log("");
 console.log("Task: E");
+
+let moreNumbers = [3, 4, 5, 6];
+
+let total = 1;
+
+function multiply(list) {
+    for (let  i = 0; i < list.length; i++) {
+      total *= list[i];
+    }
+    return total;
+  }
+
+const taskEAnswer = multiply(moreNumbers);
+
+if (taskEAnswer === 360) {
+    console.log("🎉 Task E is most likely correct");
+} else {
+    console.log("😱 Task E has some issues, but you can fix it 👍");
+}
+
+console.log("");
